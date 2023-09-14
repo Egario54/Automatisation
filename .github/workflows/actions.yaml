@@ -11,11 +11,10 @@ jobs:
     - uses: php-actions/composer@v6 # or alternative dependency management
     
     - name: PHPUnit Tests
-      uses: php-actions/phpunit@master
+      uses: php-actions/phpunit@v9
         with:
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml
-          args: --coverage-text
         env:
           XDEBUG_MODE: coverage
