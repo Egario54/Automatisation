@@ -1,4 +1,5 @@
 name: PHPUnit (php-actions)
+on: [push]
 description: Run your PHPUnit tests in your Github Actions.
 
 inputs:
