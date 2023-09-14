@@ -12,7 +12,7 @@ jobs:
     - uses: php-actions/phpunit@v9.6.11
     
     - name: PHPUnit Tests
-      uses: php-actions/phpunit@v9.6.11
+      #uses: php-actions/phpunit@v9.6.11
         with:
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
