@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: php-actions/composer@v6 # or alternative dependency management
-    #- uses: php-actions/phpunit@v3
+    - uses: php-actions/phpunit@v3
     
     - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
@@ -20,4 +20,3 @@ jobs:
           args: --coverage-text
         env:
           XDEBUG_MODE: coverage
-          TEST_NAME: Scarlett
