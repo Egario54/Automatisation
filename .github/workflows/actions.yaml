@@ -8,13 +8,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: php-actions/composer@v2 # or alternative dependency management
+    - uses: php-actions/composer@v6 # or alternative dependency management
     
     - name: PHPUnit Tests
       uses: php-actions/phpunit@v9
         with:
-          php_extensions: xdebug
+          version: 9.6.11
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml
+          args: --coverage-text
         env:
           XDEBUG_MODE: coverage
