@@ -17,5 +17,3 @@ jobs:
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml
           args: --coverage-text
-        env:
-          XDEBUG_MODE: coverage
