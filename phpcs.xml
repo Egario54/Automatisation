@@ -6,19 +6,8 @@
     <file>tpl</file>
     <file>lib</file>
 
-    <exclude-pattern>*/src/Standards/*/Tests/*\.(inc|css|js)$</exclude-pattern>
     <exclude-pattern>*\.(inc|css|js)$</exclude-pattern>
     <exclude-pattern>*/tst/*\.php$</exclude-pattern>
-
-    <arg name="basepath" value="."/>
-    <arg name="colors"/>
-    <arg name="parallel" value="75"/>
-    <arg value="np"/>
-
-    <!-- Don't hide tokenizer exceptions -->
-    <rule ref="Internal.Tokenizer.Exception">
-        <type>error</type>
-    </rule>
 
     <!-- Include the whole PEAR standard -->
     <rule ref="PEAR">
@@ -143,11 +132,6 @@
     <!-- The testing bootstrap file uses string concats to stop IDEs seeing the class aliases -->
     <rule ref="Generic.Strings.UnnecessaryStringConcat">
         <exclude-pattern>tests/bootstrap\.php</exclude-pattern>
-    </rule>
-
-    <!-- This test file specifically *needs* Windows line endings for testing purposes. -->
-    <rule ref="Generic.Files.LineEndings.InvalidEOLChar">
-        <exclude-pattern>tests/Core/Tokenizer/StableCommentWhitespaceWinTest\.php</exclude-pattern>
     </rule>
 
 </ruleset>
