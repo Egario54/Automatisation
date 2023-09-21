@@ -15,7 +15,7 @@ jobs:
         version: 9.6.11
         bootstrap: vendor/autoload.php
         configuration: phpunit.xml
-        php_extensions: xdebug
+        php_extensions: xdebug, gd
       env:
         XDEBUG_MODE: coverage
     
@@ -26,8 +26,8 @@ jobs:
         thresholds: '60 80'
     
     - name: PHP Code Sniffer
-        uses: php-actions/phpcs@v1
-        with:
-          php_version: 8.0
-          path: src/
-          standard: phpcs.xml
+      uses: php-actions/phpcs@v1
+      with:
+        php_version: 8.0
+        path: src/
+        standard: phpcs.xml
