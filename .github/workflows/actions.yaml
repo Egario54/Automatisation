@@ -16,6 +16,8 @@ jobs:
         bootstrap: vendor/autoload.php
         configuration: phpunit.xml
         php_extensions: xdebug
+      env:
+          XDEBUG_MODE: coverage
     
     - name: Code Coverage Summary Report
       uses: irongut/CodeCoverageSummary@v1.3.0
