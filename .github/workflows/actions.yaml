@@ -12,7 +12,7 @@ jobs:
     
     - name: PHPUnit Tests
       uses: php-actions/phpunit@v9
-        with:
-          version: 9.6.11
-          bootstrap: vendor/autoload.php
-          configuration: phpunit.xml
+      with:
+        version: 9.6.11
+        bootstrap: vendor/autoload.php
+        configuration: phpunit.xml
