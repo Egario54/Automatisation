@@ -10,7 +10,7 @@ jobs:
     - uses: php-actions/composer@v6 # or alternative dependency management
     
     - name: PHPUnit Tests
-      uses: php-actions/phpunit@v9
+      uses: php-actions/phpunit@v3
       with:
         version: 9.6.11
         bootstrap: vendor/autoload.php
