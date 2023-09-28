@@ -31,7 +31,7 @@ jobs:
       with:
         php_version: 8.0
         path: lib/
-        standard: phpcs.xml
+        standard: PSR2
 
     - name: PHP Mess Detector
       uses: php-actions/phpmd@v1
@@ -39,4 +39,8 @@ jobs:
         php_version: 8.0
         path: lib/
         output: text
-        ruleset: test/phpmd/ruleset.xml
+
+    - name: PHP Static Analysis
+      uses: php-actions/phpstan@v3
+      with:
+        path: lib/
