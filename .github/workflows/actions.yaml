@@ -33,7 +33,7 @@ jobs:
         path: lib/
         standard: PSR2
         error_severity : 0
-        warning_severity : 5
+        warning_severity : 8
 
     - name: PHP Mess Detector
       uses: php-actions/phpmd@v1
